@@ -4,7 +4,20 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # or https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 
-brew install ack go fzf htop jenv jq maven ncdu nvm sbt tig tmux tree
+brew install \
+    ack \
+    go \
+    fzf \
+    htop \
+    jenv \
+    jq \
+    maven \
+    ncdu \
+    nvm \
+    sbt \
+    tig \
+    tmux \
+    tree
 
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -17,3 +30,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
+
+# jenv
+# Shell: bash
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(jenv init -)"' >> ~/.bash_profile
+# Shell: zsh
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(jenv init -)"' >> ~/.zshrc

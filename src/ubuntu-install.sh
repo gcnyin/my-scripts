@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
-sudo apt install -y \
-    zsh \
-    vim \
-    tree \
-    htop \
-    tig \
-    tmux \
-    wrk \
-    protobuf-compiler
+sudo apt install -y zsh ack mosh tmux git
 
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
